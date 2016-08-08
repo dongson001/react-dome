@@ -25,7 +25,7 @@ class Test extends Component {
   }
 
   render() {
-    return (<div onTouchTap={::this.goTo}>Hello World!</div>);
+    return (<div onTouchTap={::this.goTo}>Hello World!111</div>);
   }
 
   componentDidMount() {
