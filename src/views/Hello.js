@@ -16,10 +16,18 @@ class Hello extends Component {
   componentDidMount() {
     this.props.getDetail(123);
   }
+  
+  static contextTypes = {
+    router: PropTypes.object.isRequired
+  };
+
+  goTo() {
+    this.context.router.push('prodlist')
+  }
 
   render() {
     console.log(this.props.productDetail);
-    return (<div> Hello routerReducer!!{this.props.productDetail.data.test}</div>);
+    return (<div onTouchTap={::this.goTo}> Hello routerReducer!!{this.props.productDetail.data.test}</div>);
   }
 }
 

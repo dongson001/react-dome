@@ -12,7 +12,7 @@ import { browserHistory, hashHistory } from 'react-router'
 import configureStore from 'redux/configureStore'
 
 import injectTapEventPlugin from 'react-tap-event-plugin';
-
+import 'styles/main.less';
 import routes from 'routes/index';
 
 // inject tap event system

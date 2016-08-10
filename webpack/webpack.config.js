@@ -50,12 +50,12 @@ export default {
     ],
     extensions: ['', '.js', '.png']
   },
-  //postcss: function() {
-  //  return [
-  //    require('autoprefixer'),
-  //    require('precss')
-  //  ]
-  //},
+  postcss: function() {
+   return [
+     require('autoprefixer'),
+     require('precss')
+   ]
+  },
   plugins: [
     // webpack hot middleware configuration.
     new webpack.HotModuleReplacementPlugin(),

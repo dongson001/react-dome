@@ -8,6 +8,7 @@ import { Route, IndexRoute } from 'react-router';
 import CoreLayout from 'layouts/CoreLayout';
 import Test from 'views/Test';
 import Hello from 'bundle?lazy!views/Hello';
+import ProdList from 'bundle?lazy!views/ProdList';
 
 // lazy load
 function lazyLoadComponent(lazyModule) {
@@ -46,5 +47,6 @@ export default () => (
   <Route path='/' component={CoreLayout}>
     <IndexRoute component={Test} />
     <Route path='/hello' getComponent={lazyLoadComponent(Hello)} title="Nothing" />
+    <Route path='/prodlist' getComponent={lazyLoadComponent(ProdList)} title="ProdList" />
   </Route>
 )
